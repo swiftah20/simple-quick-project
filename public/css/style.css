@@ -1,0 +1,97 @@
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.sidebar {
+    height: 100%;
+    width: 285px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #212529;
+    overflow-x: hidden;
+    padding-top: 20px;
+    border-right: solid 1px white;
+}
+
+.sidebar a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.main {
+    margin-left: 285px;
+    /* Same as the width of the sidebar */
+    /* padding: 0px 10px; */
+}
+
+.search {
+    height: 58px;
+    width: 1637px;
+    left: 283px;
+    top: 0px;
+    border-radius: 0px;
+    background-color: #4F4F4F;
+    ;
+}
+
+.quick-button {
+	position: fixed;
+	width: 68px;
+	height: 68px;
+	bottom: 40px;
+	right: 40px;
+	background-color: #2F80ED;
+	color: #FFF;
+	border-radius: 50px;
+    border: none;
+	text-align: center;
+	box-shadow: 2px 2px 3px #999;
+}
+
+.sub-quick-button {
+	position: fixed;
+	width: 60px;
+	height: 60px;
+	bottom: 40px;
+	right: 40px;
+	background-color: #F2F2F2;
+	color: #FFF;
+	border-radius: 50px;
+    border: none;
+	text-align: center;
+	box-shadow: 2px 2px 3px #999;
+}
+
+.inbox {
+    bottom: 45px;
+    right: 135px;
+}
+
+.task {
+    bottom: 45px;
+    right: 220px;
+}
+
+
+.float {
+	margin-top:22px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidebar {
+        padding-top: 15px;
+    }
+
+    .sidebar a {
+        font-size: 18px;
+    }
+}
