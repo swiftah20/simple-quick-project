@@ -44,34 +44,113 @@ body {
 }
 
 .quick-button {
-	position: fixed;
-	width: 68px;
-	height: 68px;
-	bottom: 40px;
-	right: 40px;
-	background-color: #2F80ED;
-	color: #FFF;
-	border-radius: 50px;
+    position: fixed;
+    width: 68px;
+    height: 68px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #2F80ED;
+    color: #FFF;
+    border-radius: 50px;
     border: none;
-	text-align: center;
-	box-shadow: 2px 2px 3px #999;
+    text-align: center;
+    box-shadow: 2px 2px 3px #999;
 }
 
 .sub-quick-button {
-	position: fixed;
-	width: 60px;
-	height: 60px;
-	bottom: 40px;
-	right: 40px;
-	background-color: #F2F2F2;
-	color: #FFF;
-	border-radius: 50px;
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #F2F2F2;
+    color: #FFF;
+    border-radius: 50px;
     border: none;
-	text-align: center;
-	box-shadow: 2px 2px 3px #999;
+    text-align: center;
+    box-shadow: 2px 2px 3px #999;
 }
 
 .inbox {
+    bottom: 45px;
+    right: 135px;
+}
+
+.inbox-animate-in {
+    -webkit-animation-name: inboxAnimateIn;
+    -webkit-animation-duration: 0.5s;
+
+}
+
+.inbox-animate-out {
+    -webkit-animation-name: inboxAnimateOut;
+    -webkit-animation-duration: 0.5s;
+}
+
+@-webkit-keyframes inboxAnimateIn {
+    0% {
+        opacity: 0;
+        bottom: 40px;
+        right: 40px;
+        z-index: -1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    75% {
+        opacity: 0.8;
+    }
+
+    100% {
+        opacity: 1;
+        bottom: 45px;
+        right: 135px;
+        z-index: 1;
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes inboxAnimateOut {
+    0% {
+        opacity: 1;
+        bottom: 45px;
+        right: 135px;
+        z-index: 1;
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+    }
+
+    50% {
+        opacity: 0.8;
+    }
+
+    75% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0;
+        bottom: 40px;
+        right: 40px;
+        z-index: -1;
+    }
+}
+
+.inbox:focus {
+    background-color: #8785FF;
+    bottom: 44px;
+    right: 35px;
+}
+
+.inbox:focus svg path[fill="#8885FF"] {
+    background-color: #8785FF;
+    fill: #ffffff;
+}
+
+.inbox:focus~.task {
     bottom: 45px;
     right: 135px;
 }
@@ -81,9 +160,46 @@ body {
     right: 220px;
 }
 
+.task-animate-in {
+    -webkit-animation-name: taskAnimateIn;
+    -webkit-animation-duration: 0.5s;
+
+}
+
+.task-animate-out {
+    -webkit-animation-name: taskAnimateOut;
+    -webkit-animation-duration: 0.5s;
+}
+
+
+@-webkit-keyframes taskAnimateIn {
+    0% {
+        opacity: 0;
+        bottom: 40px;
+        right: 40px;
+        z-index: -1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    75% {
+        opacity: 0.8;
+    }
+
+    100% {
+        opacity: 1;
+        bottom: 45px;
+        right: 220px;
+        z-index: 1;
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+    }
+}
 
 .float {
-	margin-top:22px;
+    margin-top: 22px;
 }
 
 @media screen and (max-height: 450px) {
