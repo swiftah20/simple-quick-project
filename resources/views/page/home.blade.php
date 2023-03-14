@@ -2,6 +2,15 @@
 
 @section('container')
     <div class="row">
+        <p id="demo"></p>
+
+        <script>
+            var w = window.innerWidth;
+            var h = window.innerHeight;
+
+            var x = document.getElementById("demo");
+            x.innerHTML = "Browser width: " + w + ", height: " + h + ".";
+        </script>
         <button class="quick-button">
             <img src="{{ asset('assets/Shape (Stroke).svg') }}">
         </button>
@@ -19,7 +28,6 @@
                     fill="#F8B76B" />
             </svg>
         </button>
-        <button class="btn btn-primary" id="klik"> klik </button>
     </div>
 @endsection
 @section('scripts')
@@ -52,6 +60,10 @@
             }
         }
 
+        function inboxFocus() {
+            $('.inbox').addClass('inbox-focus');
+        }
+
         $('body').on('click', '.quick-button', function() {
             toggleSubQuickButton();
             animateSubQuick();
@@ -59,19 +71,16 @@
 
         $('body').on('click', '.inbox', function() {
             $('.svg-inbox-active').removeClass('d-none');
-            $('#tes').show();
+            inboxFocus();
         })
 
-        // $('#modalInbox').on('shown.bs.modal', function() {
-        //     $('#modalInbox').trigger('focus')
-        // })
+        $('body').on('click', '.inbox', function() {
+            $('#modalBox').modal('show')
+        })
 
-        $('#klik').on('click', function() {
-            $('#tes').show();
-        });
-
-        $('body').on('click', '#klik', function() {
-            alert('woi')
+        $('#modalBox').on('hidden.bs.modal', function(e) {
+            $('.inbox').removeClass('inbox-focus');
+            $('.quick-button').removeClass('quick-button-disabled');
         })
     </script>
 @endsection

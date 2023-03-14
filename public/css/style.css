@@ -47,8 +47,8 @@ body {
     position: fixed;
     width: 68px;
     height: 68px;
-    bottom: 40px;
-    right: 40px;
+    bottom: 27px;
+    right: 34px;
     background-color: #2F80ED;
     color: #FFF;
     border-radius: 50px;
@@ -61,8 +61,8 @@ body {
     position: fixed;
     width: 60px;
     height: 60px;
-    bottom: 40px;
-    right: 40px;
+    bottom: 31px;
+    right: 128px;
     background-color: #F2F2F2;
     color: #FFF;
     border-radius: 50px;
@@ -72,8 +72,8 @@ body {
 }
 
 .inbox {
-    bottom: 45px;
-    right: 135px;
+    bottom: 31px;
+    right: 128px;
 }
 
 .inbox-animate-in {
@@ -105,8 +105,8 @@ body {
 
     100% {
         opacity: 1;
-        bottom: 45px;
-        right: 135px;
+        bottom: 31px;
+        right: 128px;
         z-index: 1;
         transform: rotate(360deg);
         -webkit-transform: rotate(360deg);
@@ -116,8 +116,8 @@ body {
 @-webkit-keyframes inboxAnimateOut {
     0% {
         opacity: 1;
-        bottom: 45px;
-        right: 135px;
+        bottom: 31px;
+        right: 128px;
         z-index: 1;
         transform: rotate(360deg);
         -webkit-transform: rotate(360deg);
@@ -139,25 +139,30 @@ body {
     }
 }
 
-.inbox:focus {
+.inbox-focus{
     background-color: #8785FF;
-    bottom: 44px;
+    bottom: 31px;
     right: 35px;
 }
 
-.inbox:focus svg path[fill="#8885FF"] {
+.quick-button-disabled {
+    background-color: #4F4F4F;
+    pointer-events: none;
+}
+
+.inbox-focus svg path[fill="#8885FF"] {
     background-color: #8785FF;
     fill: #ffffff;
 }
 
-.inbox:focus~.task {
-    bottom: 45px;
-    right: 135px;
+.inbox-focus~.task {
+    bottom: 31px;
+    right: 128px;
 }
 
 .task {
-    bottom: 45px;
-    right: 220px;
+    bottom: 31px;
+    right: 214px;
 }
 
 .task-animate-in {
@@ -190,12 +195,74 @@ body {
 
     100% {
         opacity: 1;
-        bottom: 45px;
-        right: 220px;
+        bottom: 31px;
+        right: 214px;
         z-index: 1;
         transform: rotate(360deg);
         -webkit-transform: rotate(360deg);
     }
+}
+
+.modal-inbox {
+    position: fixed;
+    bottom: 110px;
+    right: 34px;
+    left: auto;
+    height: 435px;
+    width: 735px;
+    /* height: 35vw;
+    width: 50vw; */
+}
+
+.modal-container {
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
+}
+
+.modal-search {
+    height: 40px;
+    border-radius: 5px;
+    padding: 10px 12px 10px 12px;
+
+}
+
+.input-search {
+    padding-left: 59px;
+    /* background: url('/public/assets/search.svg') no-repeat right; */
+    /* background-image: url("{{ asset('/public/assets/search.svg') }}"); */
+}
+
+.avatar {
+    vertical-align: middle;
+    width: 41px;
+    height: 41px;
+    border-radius: 50%;
+}
+
+.chat-title {
+    color: #2F80ED;
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block;
+    padding-right: 16px;
+}
+
+.chat-sender {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: -4px;
+}
+
+.chat-title-time {
+    color:#4F4F4F;
+}
+
+.status-badge {
+    height: 10px;
+    width: 10px;
+    background-color: red;
+    border-radius: 50%;
+    margin-top: 2.4rem;
 }
 
 .float {
@@ -210,4 +277,5 @@ body {
     .sidebar a {
         font-size: 18px;
     }
+
 }
