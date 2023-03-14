@@ -208,15 +208,16 @@ body {
     bottom: 110px;
     right: 34px;
     left: auto;
-    height: 435px;
+    /* height: 735px; */
+    height: 735px; /*biar editnya gampang */
     width: 735px;
     /* height: 35vw;
     width: 50vw; */
 }
 
 .modal-container {
-    margin-right: 1.5rem;
-    margin-left: 1.5rem;
+    margin-right: 39px;
+    margin-left: 29px;
 }
 
 .modal-search {
@@ -227,9 +228,13 @@ body {
 }
 
 .input-search {
-    padding-left: 59px;
+    padding-left: 60px;
     /* background: url('/public/assets/search.svg') no-repeat right; */
     /* background-image: url("{{ asset('/public/assets/search.svg') }}"); */
+}
+
+.col-avatar {
+    margin-right: 17px;
 }
 
 .avatar {
@@ -251,6 +256,12 @@ body {
     font-size: 14px;
     font-weight: bold;
     margin-bottom: -4px;
+}
+
+.chat-content {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .chat-title-time {
