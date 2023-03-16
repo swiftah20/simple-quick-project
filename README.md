@@ -13,7 +13,7 @@ Project ini dibuat menggunakan framework **Laravel**, **Bootstrap**, **JavaScrip
 ## Start Project
 
 ```bash
-cd /simple-quick-project
+cd /simple-quicks-project
 ```
 
 ```bash
