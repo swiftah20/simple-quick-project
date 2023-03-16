@@ -78,7 +78,7 @@ body {
     box-shadow: 2px 2px 3px #999;
 }
 
-.sub-quick-buton.active {
+.sub-quick-buton.active > img {
 
 }
 
