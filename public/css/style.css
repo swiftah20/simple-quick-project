@@ -2,6 +2,27 @@ body {
     font-family: "Lato", sans-serif;
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: lightgray;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(143, 143, 143)
+}
+
 .sidebar {
     height: 100%;
     width: 285px;
@@ -55,6 +76,10 @@ body {
     border: none;
     text-align: center;
     box-shadow: 2px 2px 3px #999;
+}
+
+.sub-quick-buton.active {
+
 }
 
 .sub-quick-button {
@@ -139,7 +164,7 @@ body {
     }
 }
 
-.inbox-focus{
+.inbox-focus {
     background-color: #8785FF;
     bottom: 31px;
     right: 35px;
@@ -203,16 +228,29 @@ body {
     }
 }
 
+/* .modal-header.modal-inbox {
+    padding-right: 25px;
+} */
+
+.modal-dialog {
+    overflow-y: initial;
+}
+
+.modal-content {
+    overflow-y: auto;
+}
+
 .modal-inbox {
     position: fixed;
     bottom: 110px;
     right: 34px;
     left: auto;
-    /* height: 735px; */
-    height: 735px; /*biar editnya gampang */
-    width: 735px;
-    /* height: 35vw;
-    width: 50vw; */
+    /* height: 835px; */
+    /* height: 435px; */
+    /*biar editnya gampang */
+    /* width: 735px; */
+    height: 35vw;
+    width: 50vw;
 }
 
 .modal-container {
@@ -233,6 +271,10 @@ body {
     /* background-image: url("{{ asset('/public/assets/search.svg') }}"); */
 }
 
+.input-search.new-message {
+    padding-left: inherit;
+}
+
 .col-avatar {
     margin-right: 17px;
 }
@@ -250,6 +292,19 @@ body {
     font-weight: bold;
     display: inline-block;
     padding-right: 16px;
+    cursor: pointer;
+}
+
+.chat-title:hover {
+    text-decoration: underline;
+}
+
+.chat-balloon-right {
+    padding-right: 30px;
+}
+
+.chat-sub-title {
+    font-size: 14px;
 }
 
 .chat-sender {
@@ -265,7 +320,7 @@ body {
 }
 
 .chat-title-time {
-    color:#4F4F4F;
+    color: #4F4F4F;
 }
 
 .status-badge {
@@ -276,9 +331,165 @@ body {
     margin-top: 2.4rem;
 }
 
+.chat-container {
+    border-radius: 5px;
+    padding: 0.7rem;
+    width: fit-content;
+}
+
+.chat-left {
+    padding-left: 1.2rem;
+}
+
+.chat-container.violet {
+    background-color: #EEDCFF;
+}
+
+.chat-container.yellow {
+    background-color: #FCEED3;
+    margin-left: 10px;
+}
+
+.chat-container.green {
+    background-color: #D2F2EA;
+    margin-left: 10px;
+}
+
+.sender-name {
+    font-weight: 700;
+}
+
+.button-chat-option {
+    margin-left: 15px;
+}
+
+.button-chat-option-ri4eght {
+    margin-right: 15px;
+}
+
+.sender-violet {
+    color: #9B51E0;
+}
+
+.sender-yellow {
+    color: #E5A443;
+}
+
+.sender-green {
+    color: #43B78D;
+}
+
 .float {
     margin-top: 22px;
 }
+
+.float-right {
+    float: right;
+}
+
+.padding-right-unset {
+    padding-right: unset;
+}
+
+.padding-left-unset {
+    padding-left: unset;
+}
+
+.line {
+    height: 1px;
+    background: black;
+}
+
+.line.left {
+    margin-left: 30px;
+}
+
+.line.right {
+    margin-right: 30px;
+}
+
+.line.red {
+    background-color: #EB5757;
+}
+
+.line-title {
+    margin-top: -12px;
+    font-size: 18px;
+    text-align: center;
+    color: #4F4F4F;
+}
+
+.line-title.red {
+    color: #EB5757;
+}
+
+.line-title.new-message {
+    background-color: #E9F3FF;
+    width: 141px;
+    height: 34px;
+    vertical-align: middle;
+    padding-top: 5px;
+    border-radius: 5px;
+    color: #2F80ED;
+}
+
+.popover-body {
+    width: 126px;
+    height: 80px;
+    padding: unset;
+}
+
+.button-option-popover {
+    text-align: left;
+}
+
+.button-option-popover.edit {
+    color: #2F80ED;
+}
+
+.button-option-popover:hover {
+    background-color: lightgrey;
+}
+
+.button-option-popover.delete {
+    color: #EB5757;
+}
+
+.button-send {
+    width: 100%;
+    height: 40px;
+    background-color: #2F80ED;
+    color: white;
+}
+
+.chat-animate-in {
+    -webkit-animation-name: chatAnimateIn;
+    -webkit-animation-duration: 0.5s;
+
+}
+
+@-webkit-keyframes taskAnimateIn {
+    0% {
+        bottom: 40px;
+        right: 40px;
+        z-index: -1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    75% {
+        opacity: 0.8;
+    }
+
+    100% {
+        opacity: 1;
+        bottom: 31px;
+        right: 214px;
+    }
+}
+
 
 @media screen and (max-height: 450px) {
     .sidebar {

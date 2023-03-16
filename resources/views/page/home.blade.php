@@ -2,15 +2,6 @@
 
 @section('container')
     <div class="row">
-        <p id="demo"></p>
-
-        <script>
-            var w = window.innerWidth;
-            var h = window.innerHeight;
-
-            var x = document.getElementById("demo");
-            x.innerHTML = "Browser width: " + w + ", height: " + h + ".";
-        </script>
         <button class="quick-button">
             <img src="{{ asset('assets/Shape (Stroke).svg') }}">
         </button>
@@ -81,6 +72,34 @@
         $('#modalBox').on('hidden.bs.modal', function(e) {
             $('.inbox').removeClass('inbox-focus');
             $('.quick-button').removeClass('quick-button-disabled');
+            $('.modal-content-inbox').removeClass('d-none')
+            $('.modal-content-chat').addClass('d-none').addClass('chat-animate-in')
+        })
+
+        const chatOptionButton = `
+            <div class="btn-group-vertical w-100 h-100">
+                <button type="button" class="btn button-option-popover edit"> Edit </button>
+                <button type="button" class="btn button-option-popover delete"> Delete </button>
+            </div>
+        `;
+
+        $(function() {
+            $('[data-toggle="popover"]').popover({
+                placement: "bottom",
+                html: true,
+                trigger: 'focus',
+                content: chatOptionButton
+            })
+        })
+
+        $('body').on('click', '.chat-title', function() {
+            $('.modal-content-inbox').addClass('d-none')
+            $('.modal-content-chat').removeClass('d-none').addClass('chat-animate-in')
+        })
+
+        $('body').on('click', '.button-back-chat', function() {
+            $('.modal-content-inbox').removeClass('d-none')
+            $('.modal-content-chat').addClass('d-none').addClass('chat-animate-in')
         })
     </script>
 @endsection
