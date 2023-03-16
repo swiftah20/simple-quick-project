@@ -17,7 +17,7 @@ cd /simple-quick-project
 ```
 
 ```bash
-cd php artisan serve
+php artisan serve
 ```
 
 ## Fitur Simple Quick Project
