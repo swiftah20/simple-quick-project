@@ -10,6 +10,16 @@ Project ini dibuat menggunakan framework **Laravel**, **Bootstrap**, **JavaScrip
 - Bootstrap 
 - JQuery 3.6x https://jquery.com/download/
 
+## Start Project
+
+```bash
+cd /simple-quick-project
+```
+
+```bash
+cd php artisan serve
+```
+
 ## Fitur Simple Quick Project
 
 Berikut adalah fitur-fitur yang dapat saya selesaikan, antara lain:
